@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://cdn.bootcdn.net/ajax/libs/vue/2.6.13/vue.js"></script>
+</head>
+<body>
+<!--    view视图-->
+    <div id="app">
+        {{message}}
+
+        <span v-bind:title="message">
+            sdfsd
+        </span>
+    </div>
+
+    <script>
+        var vm = new Vue({
+            el:"#app",
+            // model数据
+            data:{
+                message:"hello,vue"
+            }
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <script src="https://cdn.bootcdn.net/ajax/libs/vue/2.6.13/vue.js"></script>
+</head>
+<body>
+
+<div id="app">
+  <input type="text" v-model="msg">
+  {{msg}}
+  <hr>
+
+  <input type="radio" name="sex" value="男" v-model="sex"> 男
+  <input type="radio" name="sex" value="女" v-model="sex"> 女
+  <p>{{sex}}</p>
+  <hr>
+
+  <select name="" id="" v-model="result">
+    <option value="A">A</option>
+    <option value="B">B</option>
+    <option value="c">C</option>
+  </select>
+</div>
+
+<script>
+  var vm = new Vue({
+    el:"#app",
+    data:{
+      msg:"java",
+      sex:"女",
+      result: "B"
+    },
+    methods : {
+
+    }
+  })
+</script>
+</body>
+</html>

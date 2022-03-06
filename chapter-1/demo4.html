@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <script src="https://cdn.bootcdn.net/ajax/libs/vue/2.6.13/vue.js"></script>
+</head>
+<body>
+
+<div id="app">
+    <button @click="sayHi">点我</button>
+</div>
+
+<script>
+  var vm = new Vue({
+    el:"#app",
+    data:{
+      msg:"java"
+    },
+    methods : {
+        sayHi:function() {
+            alert(this.msg)
+        }
+    }
+  })
+</script>
+</body>
+</html>

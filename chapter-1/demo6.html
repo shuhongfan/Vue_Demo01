@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://cdn.bootcdn.net/ajax/libs/vue/2.6.13/vue.js"></script>
+</head>
+<body>
+
+<div id="app">
+    <hello v-for="item in items" :key="item" :i=item></hello>
+</div>
+
+<script>
+    Vue.component("hello",{
+        template:"<li>{{i}}</li>",
+        props : ['i']
+    })
+    var vm = new Vue({
+        el:"#app",
+        data:{
+            items:["java","javascript",'php']
+        },
+        methods : {
+
+        }
+    })
+</script>
+</body>
+</html>

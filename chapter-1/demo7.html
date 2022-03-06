@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://cdn.bootcdn.net/ajax/libs/vue/2.6.13/vue.js"></script>
+    <script src="https://cdn.bootcdn.net/ajax/libs/axios/0.26.0/axios.js"></script>
+</head>
+<body>
+
+<div id="app">
+    <table border="1">
+        <tr>
+            <td>fidstName</td>
+            <td>lastName</td>
+            <td>email</td>
+        </tr>
+        <tr v-for="item in info.programmers">
+            <td>{{item.firstName}}</td>
+            <td>{{item.lastName}}</td>
+            <td>{{item.email}}</td>
+        </tr>
+    </table>
+</div>
+
+<script>
+    var vm = new Vue({
+        el:"#app",
+        data:{
+            info:{
+                programmers:{
+                    firstName:null,
+                    lastName:null,
+                    email:null
+                },programmers:{
+                    firstName:null,
+                    lastName:null,
+                    genre:null
+                },instrument:{
+                    firstName:null,
+                    lastName:null,
+                    genre:null
+                }
+            }
+        },
+        methods : {
+
+        },
+        mounted(){ // 钩子函数
+            axios.get("data.json").then(res=>this.info=res.data)
+        }
+    })
+</script>
+</body>
+</html>

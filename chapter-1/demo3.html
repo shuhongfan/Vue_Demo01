@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <script src="https://cdn.bootcdn.net/ajax/libs/vue/2.6.13/vue.js"></script>
+</head>
+<body>
+<!--    view视图-->
+<div id="app">
+  <li v-for="item in items">{{item}}</li>
+</div>
+
+<script>
+  var vm = new Vue({
+    el:"#app",
+    // model数据
+    data:{
+      items:[
+        {message:'java'},
+        {message:'javascript'}
+      ]
+    }
+  })
+</script>
+</body>
+</html>

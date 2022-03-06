@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://cdn.bootcdn.net/ajax/libs/vue/2.6.13/vue.js"></script>
+</head>
+<body>
+
+<div id="app">
+        {{currentTime1()}}
+    <hr>
+        {{currentTime2}}
+</div>
+
+<script>
+
+    var vm = new Vue({
+        el:"#app",
+        data:{
+        },
+        methods : {
+            currentTime1:function() {
+                return Date.now();
+            }
+        },
+        computed : { // 计算属性
+            currentTime2:function() {
+                return Date.now();
+            }
+        }
+    })
+</script>
+</body>
+</html>
